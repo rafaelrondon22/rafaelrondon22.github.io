@@ -4,8 +4,9 @@
   "description": "DesarrolloWeb-MiProyecto",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css","watch-css": "nodemon -e scss -x \"npm run build-css\""
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/rafaelrondon22/RafaRondon-DesaWeb-29315.github.io/issues"
   },
-  "homepage": "https://github.com/rafaelrondon22/RafaRondon-DesaWeb-29315.github.io#readme"
+  "homepage": "https://github.com/rafaelrondon22/RafaRondon-DesaWeb-29315.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.96.0"
+  }
 }

@@ -1,0 +1,210 @@
+// ============================================
+// Header Component
+// ============================================
+
+@import '../design-tokens';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $z-sticky;
+    background: rgba($color-white, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-sm;
+    transition: all $transition-base;
+
+    &.scrolled {
+        box-shadow: $shadow-md;
+        background: rgba($color-white, 1);
+    }
+
+    &__container {
+        max-width: $container-2xl;
+        margin: 0 auto;
+        padding: 0 $spacing-6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+        @media (max-width: $breakpoint-md) {
+            height: 70px;
+            padding: 0 $spacing-4;
+        }
+    }
+}
+
+// ============================================
+// LOGO
+// ============================================
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-decoration: none;
+    font-family: $font-heading;
+    transition: transform $transition-base;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        height: 45px;
+        width: auto;
+
+        @media (max-width: $breakpoint-md) {
+            height: 35px;
+        }
+    }
+
+    span {
+        @media (max-width: $breakpoint-sm) {
+            display: none;
+        }
+    }
+}
+
+// ============================================
+// NAVIGATION
+// ============================================
+
+.nav {
+    @media (max-width: $breakpoint-md) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $color-white;
+        box-shadow: $shadow-lg;
+        padding: $spacing-6;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: $spacing-8;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media (max-width: $breakpoint-md) {
+            flex-direction: column;
+            gap: $spacing-4;
+        }
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__link {
+        font-weight: $font-weight-semibold;
+        color: $color-text-dark;
+        text-decoration: none;
+        position: relative;
+        padding: $spacing-2 0;
+        transition: color $transition-base;
+        font-size: $font-size-base;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, $color-primary, $color-secondary);
+            border-radius: $radius-full;
+            transition: width $transition-base;
+        }
+
+        &:hover,
+        &.active {
+            color: $color-primary;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: $breakpoint-md) {
+            display: block;
+            padding: $spacing-3;
+            border-radius: $radius-md;
+
+            &:hover {
+                background: $color-primary-light;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+// ============================================
+// MOBILE MENU TOGGLE
+// ============================================
+
+.nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: $font-size-2xl;
+    color: $color-primary;
+    cursor: pointer;
+    padding: $spacing-2;
+    transition: transform $transition-base;
+
+    @media (max-width: $breakpoint-md) {
+        display: block;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+// ============================================
+// HEADER CTA BUTTON
+// ============================================
+
+.header__cta {
+    @media (max-width: $breakpoint-lg) {
+        display: none;
+    }
+}
+
+// ============================================
+// STICKY HEADER ANIMATION
+// ============================================
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header.scrolled {
+    animation: slideDown $transition-base;
+}

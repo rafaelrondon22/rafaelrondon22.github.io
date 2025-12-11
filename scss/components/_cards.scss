@@ -1,0 +1,230 @@
+// ============================================
+// Card Components
+// ============================================
+
+@import '../design-tokens';
+
+.card {
+    background: $color-white;
+    border-radius: $radius-2xl;
+    padding: $spacing-8;
+    box-shadow: $shadow-md;
+    transition: all $transition-base;
+    border: 1px solid $color-gray-200;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-xl;
+        border-color: rgba($color-secondary, 0.3);
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba($color-primary, 0.1), rgba($color-secondary, 0.1));
+        color: $color-primary;
+        border-radius: $radius-full;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-3xl;
+        margin-bottom: $spacing-6;
+        transition: all $transition-base;
+
+        i {
+            transition: transform $transition-base;
+        }
+    }
+
+    &:hover &__icon {
+        background: linear-gradient(135deg, $color-primary, $color-secondary);
+        color: $color-white;
+        transform: scale(1.1);
+
+        i {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: $color-text-dark;
+        margin-bottom: $spacing-4;
+        font-family: $font-heading;
+    }
+
+    &__text {
+        font-size: $font-size-base;
+        color: $color-text-medium;
+        line-height: $line-height-relaxed;
+        flex-grow: 1;
+    }
+
+    &__footer {
+        margin-top: $spacing-6;
+        padding-top: $spacing-4;
+        border-top: 1px solid $color-gray-200;
+    }
+}
+
+// ============================================
+// SERVICE CARD VARIANT
+// ============================================
+
+.service-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $color-primary, $color-secondary);
+        transform: scaleX(0);
+        transition: transform $transition-base;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    .card__icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ============================================
+// TESTIMONIAL CARD
+// ============================================
+
+.testimonial-card {
+    position: relative;
+    padding: $spacing-8 $spacing-6;
+
+    &__quote {
+        font-size: $font-size-3xl;
+        color: $color-primary-light;
+        position: absolute;
+        top: $spacing-4;
+        left: $spacing-4;
+        line-height: 1;
+    }
+
+    &__text {
+        font-style: italic;
+        margin-bottom: $spacing-6;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: $spacing-4;
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: $radius-full;
+        object-fit: cover;
+        border: 2px solid $color-primary-light;
+    }
+
+    &__name {
+        font-weight: $font-weight-semibold;
+        color: $color-text-dark;
+        margin-bottom: $spacing-1;
+    }
+
+    &__pet {
+        font-size: $font-size-sm;
+        color: $color-text-medium;
+    }
+
+    &__rating {
+        color: $color-accent-yellow;
+        margin-bottom: $spacing-4;
+    }
+}
+
+// ============================================
+// FEATURE CARD
+// ============================================
+
+.feature-card {
+    background: linear-gradient(135deg, $color-white, $color-gray-100);
+    border-left: 4px solid $color-secondary;
+
+    &__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: $color-secondary;
+        color: $color-white;
+        border-radius: $radius-full;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-4;
+    }
+}
+
+// ============================================
+// PRICING CARD
+// ============================================
+
+.pricing-card {
+    text-align: center;
+
+    &__price {
+        font-size: $font-size-4xl;
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        margin: $spacing-6 0;
+
+        span {
+            font-size: $font-size-lg;
+            color: $color-text-medium;
+        }
+    }
+
+    &__features {
+        list-style: none;
+        padding: 0;
+        margin: $spacing-6 0;
+
+        li {
+            padding: $spacing-3 0;
+            border-bottom: 1px solid $color-gray-200;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            i {
+                color: $color-accent-green;
+                margin-right: $spacing-2;
+            }
+        }
+    }
+
+    &--featured {
+        border: 2px solid $color-secondary;
+        transform: scale(1.05);
+        box-shadow: $shadow-xl;
+
+        .card__title {
+            color: $color-secondary;
+        }
+    }
+}

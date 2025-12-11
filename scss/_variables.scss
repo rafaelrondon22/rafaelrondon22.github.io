@@ -1,18 +1,40 @@
-// /* Variables */
-$color-body: beige;
-$backgroung-header-img: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(99, 117, 19, 0.73));
-$sombra-texto: #5a5d5e;
-$color-menuboton: aliceblue;
-$color-texto-main: rgb(99, 23, 23);
-$backgroung-main: rgb(255,238,195);
-$backgroung-main-img: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(148, 156, 113, 0.73));
-$color-h1: #230f6b;
-$box-shadow: #592A08;
+// ============================================
+// TrasLaMascota Variables
+// Import design tokens and create semantic variables
+// ============================================
 
-// /*Maps*/
+@import 'design-tokens';
+
+// ============================================
+// SEMANTIC COLOR VARIABLES
+// ============================================
+
+// Body & Background
+$color-body: $color-background;
+$color-body-bg: $color-background;
+$backgroung-main: $color-background;
+
+// Text Colors
+$color-texto-main: $color-text-dark;
+$color-text-main: $color-text-dark;
+$color-text-light: $color-white;
+
+// Header & Navigation
+$color-h1: $color-primary;
+$color-menuboton: $color-secondary;
+$backgroung-header-img: linear-gradient(135deg, rgba(43, 122, 155, 0.95), rgba(30, 86, 112, 0.85));
+
+// Shadows
+$box-shadow: $shadow-md;
+$sombra-texto: rgba(0, 0, 0, 0.2);
+$backgroung-main-img: none;
+
+// ============================================
+// LEGACY MAPS (for backward compatibility)
+// ============================================
+
 $menu-style: (
     centro: center,
-    espaciado: 15px,
-    tam-fuente: 25px
+    espaciado: $spacing-2,
+    tam-fuente: $font-size-base
 );
-

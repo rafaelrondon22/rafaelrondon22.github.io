@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// --- Colors ---
+// Primary & Secondary
+$color-primary: hsl(250, 60%, 60%); // Deep Lavender - Trust/Tech
+$color-secondary: hsl(35, 100%, 65%); // Warm Amber - Energy/Pets
+$color-accent: hsl(190, 80%, 60%); // Cyan/Teal - Freshness
+
+// Neutrals
+$color-white: hsl(0, 0%, 100%);
+$color-bg: hsl(210, 20%, 98%); // Soft Blue/Grey Tint
+$color-text-main: hsl(210, 20%, 25%); // Dark Slate
+$color-text-light: hsl(210, 10%, 60%); // Muted Grey
+
+// Functional
+$color-success: hsl(145, 60%, 50%);
+$color-error: hsl(355, 70%, 60%);
+
+// --- Typography ---
+$font-family-headings: 'Outfit', sans-serif;
+$font-family-body: 'Open Sans', sans-serif;
+$font-size-base: 1rem;
+
+// --- Spacing ---
+$spacing-unit: 8px;
+$container-width: 1200px;
+
+// --- Effects ---
+$shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 10px 15px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+$glass-bg: rgba(255, 255, 255, 0.7);
+$glass-border: 1px solid rgba(255, 255, 255, 0.5);
+$glass-blur: blur(10px);
