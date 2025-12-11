@@ -1,113 +1,379 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TrasLaMascota... Tu Servicio de Traslado de Mascotas al Veterinario y Paseos con tu amigo peludo!">
+    <meta name="description"
+        content="Servicios de traslado de mascotas en Caracas: Veterinario, Peluquería, Paseos y Viajes a la Playa. Servicio profesional y confiable.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="../css/all.min.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title> TrasLaMascota | Servicios </title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <title>TrasLaMascota | Servicios</title>
 </head>
+
 <body>
-    <div id="grilla">
-        <header class="header">
-            <div class="header__titulo">
-                <a class="ancla" href="../index.html"><img class="logo" src="../Images/logo.png" alt="logo"></a>
-                <a class="ancla" href="../index.html"><h1 class="animate__animate animate__heartBeat"> TrasLaMascota </h1></a>
-                <div class="container-lg d-flex justify-content-end">
-                    <nav class="navbar navbar-expand-xl colornav">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                            </button>
-                        <div class="offcanvas offcanvas-end"
-                        tabindex="-1"
-                        id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="menu__hide" id="offcanvasNavbarLabel">TrasLaMascota</h5>
-                                <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="offcanvas"
-                                aria-label="Close"
-                                ></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="../index.html">Inicio</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./servicios.html">Servicios</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./galeria.html">Galeria</a>
-                                    </li>  
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./aliados.html">Aliados</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./contacto.html">Contactos</a>
-                                    </li>
-                                </ul>
-                            </div>  
-                        </div>      
-                    </nav>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="header__container container">
+            <a href="../index.html" class="logo">
+                <img src="../Images/logo.png" alt="TrasLaMascota Logo">
+                <span>TrasLaMascota</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="./servicios.html" class="nav__link active">Servicios</a></li>
+                    <li class="nav__item"><a href="./galeria.html" class="nav__link">Galería</a></li>
+                    <li class="nav__item"><a href="./aliados.html" class="nav__link">Aliados</a></li>
+                    <li class="nav__item"><a href="./contacto.html" class="nav__link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--whatsapp header__cta" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Reservar
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="nav__toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <h1 class="hero__title">Nuestros Servicios</h1>
+            <p class="hero__subtitle">
+                Soluciones completas de transporte para tu mascota. Seguridad, comodidad y profesionalismo en cada
+                viaje.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Service 1: Veterinary Visits -->
+            <div class="service-detail">
+                <div class="service-detail__content">
+                    <div class="service-detail__icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <div class="service-detail__text">
+                        <h2>Visitas Veterinarias</h2>
+                        <p class="service-detail__description">
+                            Llevamos a tu mascota al veterinario con el máximo cuidado y atención. Entendemos que las
+                            visitas médicas
+                            pueden ser estresantes, por eso nos aseguramos de que el viaje sea lo más tranquilo posible.
+                        </p>
+
+                        <h4>¿Qué incluye?</h4>
+                        <ul class="service-detail__features">
+                            <li><i class="fa-solid fa-check"></i> Recogida puerta a puerta</li>
+                            <li><i class="fa-solid fa-check"></i> Transporte en vehículo acondicionado</li>
+                            <li><i class="fa-solid fa-check"></i> Acompañamiento durante la consulta (opcional)</li>
+                            <li><i class="fa-solid fa-check"></i> Retorno a domicilio</li>
+                            <li><i class="fa-solid fa-check"></i> Fotos y actualizaciones en tiempo real</li>
+                        </ul>
+
+                        <div class="service-detail__pricing">
+                            <span class="price">Desde $15</span>
+                            <span class="price-note">Precio varía según distancia</span>
+                        </div>
+
+                        <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--primary" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Reservar Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="service-detail__image">
+                    <img src="../Images/Veterinario/Veterinario.png" alt="Visita al Veterinario" loading="lazy">
                 </div>
             </div>
-        </header>
-        <main>
-            <section class="contenedor">
-                <h2 class="titulo">🚕 Conoce Nuestros Servicios</h2>
-                <div class="formulario__order">
-                    <article class="describa">
-                        <h3 class="parrafo">Te acompañamos al Vete:</h3>
-                        <p>- Traslado por Visita al Veterinario de tu amiga o amigo peludo. <br>
-                            - Viajes a la Peluquería y/o Baño de tu mascota.</p>
-                            <img src="../Images/Veterinario/Veterinario.png" alt="Visita al Vete">
-                    </article>
-                    <article class="describa">
-                        <h3 class="parrafo">Nos Vamos de Paseo...</h3>
-                        <p>- Paseos con tus fieles compañeros(Solo en CABA y Zona Norte). <br>
-                            - Visitas a Familiares con amigos inseparables..</p>
-                            <img src="../Images/Veterinario/paseo.png" alt="Paseo con mascota">
-                    </article>
-                    <article class="describa">
-                        <h3 class="parrafo">A la Playa con tu mascota</h3>
-                        <p>- Te llevamos y te buscamos en la Costa.. <br>
-                        - En Verano o en Invierno....</p>
-                        <img src="../Images/Veterinario/playa.png" alt="Viaje a la Playa">
-                    </article>
+
+            <!-- Service 2: Grooming & Spa -->
+            <div class="service-detail service-detail--reverse">
+                <div class="service-detail__content">
+                    <div class="service-detail__icon">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div class="service-detail__text">
+                        <h2>Peluquería & Spa Canino</h2>
+                        <p class="service-detail__description">
+                            Tu mascota merece verse y sentirse bien. La llevamos a su sesión de belleza y la traemos de
+                            vuelta
+                            renovada, limpia y feliz. Trabajamos con las mejores peluquerías caninas de Caracas.
+                        </p>
+
+                        <h4>¿Qué incluye?</h4>
+                        <ul class="service-detail__features">
+                            <li><i class="fa-solid fa-check"></i> Traslado ida y vuelta</li>
+                            <li><i class="fa-solid fa-check"></i> Coordinación con la peluquería</li>
+                            <li><i class="fa-solid fa-check"></i> Espera durante el servicio (si lo deseas)</li>
+                            <li><i class="fa-solid fa-check"></i> Cuidado especial post-baño</li>
+                            <li><i class="fa-solid fa-check"></i> Fotos del antes y después</li>
+                        </ul>
+
+                        <div class="service-detail__pricing">
+                            <span class="price">Desde $12</span>
+                            <span class="price-note">Consulta por paquetes mensuales</span>
+                        </div>
+
+                        <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--primary" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Reservar Ahora
+                        </a>
+                    </div>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <h3 class="describa">Redes Sociales</h3>
-                <div class="redes">
-                    <a href="../pages/contacto.html"><i class="fa-solid fa-envelope fa-3x"></i></a>
+                <div class="service-detail__image">
+                    <img src="../Images/Mascotas/88ab85de8021996dffdb4959e04a79c5.jpeg" alt="Peluquería Canina"
+                        loading="lazy">
                 </div>
-                <div class="redes">
-                    <a href="https://www.instagram.com/traslamascota/" target="_blank"><img class="redes__ig" src="../Images/SocialMedia/IG.png" alt="Instagram"></a>
+            </div>
+
+            <!-- Service 3: Recreational Walks -->
+            <div class="service-detail">
+                <div class="service-detail__content">
+                    <div class="service-detail__icon">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div class="service-detail__text">
+                        <h2>Paseos Recreativos</h2>
+                        <p class="service-detail__description">
+                            ¿Tu mascota necesita ejercicio y diversión? La llevamos a parques y espacios verdes donde
+                            puede
+                            correr, jugar y socializar. Ideal para dueños con agendas ocupadas.
+                        </p>
+
+                        <h4>¿Qué incluye?</h4>
+                        <ul class="service-detail__features">
+                            <li><i class="fa-solid fa-check"></i> Recogida y entrega a domicilio</li>
+                            <li><i class="fa-solid fa-check"></i> Paseo de 1-2 horas en parques</li>
+                            <li><i class="fa-solid fa-check"></i> Supervisión constante</li>
+                            <li><i class="fa-solid fa-check"></i> Hidratación y descansos</li>
+                            <li><i class="fa-solid fa-check"></i> Videos y fotos del paseo</li>
+                        </ul>
+
+                        <div class="service-detail__pricing">
+                            <span class="price">Desde $10</span>
+                            <span class="price-note">Solo CABA y Zona Norte</span>
+                        </div>
+
+                        <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--primary" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Reservar Ahora
+                        </a>
+                    </div>
                 </div>
-                <div class="redes">
-                    <a href="https://www.facebook.com/traslamascota" target="_blank"><i class="fa-brands fa-square-facebook fa-4x"></i></a>
+                <div class="service-detail__image">
+                    <img src="../Images/Veterinario/paseo.png" alt="Paseo con Mascota" loading="lazy">
                 </div>
-                <div class="redes">
-                    <a href="https://www.tiktok.com/@traslamascota?lang=es" target="_blank"><i class="fa-brands fa-tiktok fa-3x"></i></a>
-                </div>                
-                <div class="redes">
-                    <a href="https://wa.me/message/CPI3FRIOEGW4M1" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
-                </div>    
-            <p class="describa">Derechos Reservados</p>
-        </footer>
-    </div>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+            </div>
+
+            <!-- Service 4: Beach Trips -->
+            <div class="service-detail service-detail--reverse">
+                <div class="service-detail__content">
+                    <div class="service-detail__icon">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <div class="service-detail__text">
+                        <h2>Viajes a la Playa</h2>
+                        <p class="service-detail__description">
+                            En verano y temporadas de vacaciones, armamos paquetes especiales para que disfrutes la
+                            costa
+                            con tu mejor amigo. No pierdas ni un solo día de playa por no tener cómo llevar a tu
+                            mascota.
+                        </p>
+
+                        <h4>¿Qué incluye?</h4>
+                        <ul class="service-detail__features">
+                            <li><i class="fa-solid fa-check"></i> Traslado ida y vuelta a la costa</li>
+                            <li><i class="fa-solid fa-check"></i> Vehículo espacioso y cómodo</li>
+                            <li><i class="fa-solid fa-check"></i> Paradas para hidratación</li>
+                            <li><i class="fa-solid fa-check"></i> Flexibilidad de horarios</li>
+                            <li><i class="fa-solid fa-check"></i> Paquetes para múltiples días</li>
+                        </ul>
+
+                        <div class="service-detail__pricing">
+                            <span class="price">Consultar</span>
+                            <span class="price-note">Precio según destino y duración</span>
+                        </div>
+
+                        <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--primary" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+                <div class="service-detail__image">
+                    <img src="../Images/Veterinario/playa.png" alt="Viaje a la Playa" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: linear-gradient(135deg, #E8F4F8, #FFFFFF);">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Preguntas Frecuentes</h2>
+                <p class="section__subtitle">Respuestas a las dudas más comunes sobre nuestros servicios</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Cómo reservo un servicio?</h4>
+                    <p>Puedes reservar por WhatsApp, nuestro formulario de contacto o llamada telefónica. Te pediremos
+                        detalles sobre tu mascota y el servicio que necesitas.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Qué medidas de seguridad tienen?</h4>
+                    <p>Contamos con vehículos acondicionados, seguro de responsabilidad civil, y personal capacitado en
+                        manejo de mascotas. Tu amigo peludo está en buenas manos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Atienden emergencias?</h4>
+                    <p>Sí, ofrecemos servicio de emergencia 24/7 para traslados urgentes al veterinario. Contáctanos
+                        inmediatamente por WhatsApp.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Qué tamaño de mascotas transportan?</h4>
+                    <p>Transportamos mascotas de todos los tamaños, desde pequeños gatos hasta perros grandes. Nuestros
+                        vehículos están adaptados para cualquier tamaño.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Puedo acompañar a mi mascota?</h4>
+                    <p>¡Por supuesto! Puedes acompañar a tu mascota en el viaje si lo deseas. También ofrecemos el
+                        servicio sin acompañante.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4><i class="fa-solid fa-question-circle"></i> ¿Cómo son los pagos?</h4>
+                    <p>Aceptamos efectivo, transferencias bancarias y pago móvil. El pago se realiza al finalizar el
+                        servicio o puedes pre-pagar si prefieres.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Necesitas Alguno de Nuestros Servicios?</h2>
+            <p>Contáctanos ahora y agenda tu traslado</p>
+            <div class="cta-section__actions">
+                <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--secondary btn--xl" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="./contacto.html" class="btn btn--outline btn--outline-white btn--xl">
+                    <i class="fa-solid fa-envelope"></i>
+                    Formulario
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget Container -->
+    <div id="chat-widget-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <h3>TrasLaMascota</h3>
+                <p>Tu servicio de confianza en Caracas para el traslado seguro y profesional de mascotas.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/traslamascota/" target="_blank" class="social-instagram"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/traslamascota" target="_blank" class="social-facebook"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/message/CPI3FRIOEGW4M1" target="_blank" class="social-whatsapp"
+                        aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@traslamascota?lang=es" target="_blank" class="social-tiktok"
+                        aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="./servicios.html">Visitas Veterinarias</a></li>
+                    <li><a href="./servicios.html">Peluquería & Spa</a></li>
+                    <li><a href="./servicios.html">Paseos Recreativos</a></li>
+                    <li><a href="./servicios.html">Viajes a la Playa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./galeria.html">Galería</a></li>
+                    <li><a href="./aliados.html">Aliados</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section footer__contact">
+                <h4>Contacto</h4>
+                <p>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/message/CPI3FRIOEGW4M1" target="_blank">WhatsApp</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="./contacto.html">Formulario de Contacto</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    Caracas, Venezuela
+                </p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2025 TrasLaMascota. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/chat-widget.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
 </body>
+
 </html>

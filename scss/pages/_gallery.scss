@@ -1,0 +1,65 @@
+// ============================================
+// Gallery Page Styles
+// ============================================
+
+@import '../design-tokens';
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $spacing-6;
+
+    @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: $radius-xl;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+    box-shadow: $shadow-md;
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-xl;
+
+        .gallery-item__overlay {
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform $transition-slow;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.6));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity $transition-base;
+
+        i {
+            color: $color-white;
+            font-size: $font-size-4xl;
+        }
+    }
+}

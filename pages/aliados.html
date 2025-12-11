@@ -1,166 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TrasLaMascota... Tu Servicio de Traslado de Mascotas al Veterinario y Paseos con tu amigo peludo!">
+    <meta name="description"
+        content="Nuestros aliados comerciales en TrasLaMascota. Veterinarias y peluquerías de confianza en Caracas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="../Images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/all.min.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title> TrasLaMascota | Aliados </title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>TrasLaMascota | Aliados</title>
 </head>
+
 <body>
-    <div id="grilla">
-        <header class="header">
-            <div class="header__titulo">
-                <a class="ancla" href="../index.html"><img class="logo" src="../Images/logo.png" alt="logo"></a>
-                <a class="ancla" href="../index.html"><h1 class="animate__animate animate__heartBeat"> TrasLaMascota </h1></a>
-                <div class="container-lg d-flex justify-content-end">
-                    <nav class="navbar navbar-expand-xl colornav">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                            </button>
-                        <div class="offcanvas offcanvas-end"
-                        tabindex="-1"
-                        id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="menu__hide" id="offcanvasNavbarLabel">TrasLaMascota</h5>
-                                <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="offcanvas"
-                                aria-label="Close"
-                                ></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="../index.html">Inicio</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./servicios.html">Servicios</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./galeria.html">Galeria</a>
-                                    </li>  
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./aliados.html">Aliados</a>
-                                    </li>
-                                    <li class="nav-item menu__boton">
-                                        <a class="nav-link linkcolor ancla" href="./contacto.html">Contactos</a>
-                                    </li>
-                                </ul>
-                            </div>  
-                        </div>      
-                    </nav>
+    <header class="header">
+        <div class="header__container container">
+            <a href="../index.html" class="logo">
+                <img src="../Images/logo.png" alt="TrasLaMascota Logo">
+                <span>TrasLaMascota</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="./servicios.html" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="./galeria.html" class="nav__link">Galería</a></li>
+                    <li class="nav__item"><a href="./aliados.html" class="nav__link active">Aliados</a></li>
+                    <li class="nav__item"><a href="./contacto.html" class="nav__link">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--whatsapp header__cta" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Reservar
+            </a>
+            <button class="nav__toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <h1 class="hero__title">Nuestros Aliados</h1>
+            <p class="hero__subtitle">Trabajamos con los mejores profesionales para el cuidado de tu mascota</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Aliados Comerciales</h2>
+                <p class="section__subtitle">Veterinarias y peluquerías de confianza en Caracas</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #2B7A9B, #FF8C42);">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h3 class="card__title">Veterinarias Asociadas</h3>
+                    <p class="card__text">
+                        Trabajamos con las mejores clínicas veterinarias de Caracas para garantizar
+                        la mejor atención médica para tu mascota.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #2B7A9B, #FF8C42);">
+                        <i class="fa-solid fa-cut"></i>
+                    </div>
+                    <h3 class="card__title">Peluquerías Caninas</h3>
+                    <p class="card__text">
+                        Alianzas con peluquerías especializadas que ofrecen servicios de calidad
+                        y trato profesional para tu peludo.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon" style="background: linear-gradient(135deg, #2B7A9B, #FF8C42);">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="card__title">Tiendas de Mascotas</h3>
+                    <p class="card__text">
+                        Descuentos especiales en tiendas asociadas para alimentos, accesorios
+                        y productos para el cuidado de mascotas.
+                    </p>
                 </div>
             </div>
-        </header>
-        <main>
-            <section>
-                <h2 class="titulo">Aliados Comerciales</h2>
-                <div class="d-flex justify-content-evenly flex-wrap">
-                    <div class="describa table-responsive">
-                        <span>Veterinarios</span>
-                        <table class="table table-warning table-striped-columns table-bordered border-primary table-sm">
-                            <thead>
-                                <tr class="table-success table-bordered border-primary">
-                                    <th>Veterinarios</th>
-                                    <th>direccion</th>
-                                    <th>Telefono</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Dra. Elisa Kren</td>
-                                    <td>Florida-Vicente Lopez</td>
-                                    <td>+5478945622</td>
-                                </tr>
-                                <tr>
-                                    <td>Nuevo Sol</td>
-                                    <td>Villa Martelli</td>
-                                    <td>+5488888888</td>
-                                </tr>
-                                <tr>
-                                    <td>Punto Mascota</td>
-                                    <td>Florida Oeste</td>
-                                    <td>+5488456782</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="describa table-responsive">
-                        <span>Colaboradores</span>
-                        <table class="table table-warning table-striped-columns table-bordered border-primary table-sm">
-                            <thead>
-                                <tr class="table-success table-bordered border-primary">
-                                    <th>Nombres</th>
-                                    <th>Zonas</th>
-                                    <th>Telefono</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Traslados Maria</td>
-                                    <td>Tigre</td>
-                                    <td>+542222222</td>
-                                </tr>
-                                <tr>
-                                    <td>Traslado Mascota Aljuma</td>
-                                    <td>Avellaneda</td>
-                                    <td>+54333333333</td>
-                                </tr>
-                                <tr>
-                                    <td>Pet Drivers</td>
-                                    <td>CABA</td>
-                                    <td>+543334443</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>      
+
+            <div
+                style="margin-top: 4rem; text-align: center; padding: 3rem; background: linear-gradient(135deg, #E8F4F8, #FFF4ED); border-radius: 1.5rem;">
+                <h3 style="margin-bottom: 1.5rem; color: #2B7A9B;">¿Quieres Ser Nuestro Aliado?</h3>
+                <p
+                    style="margin-bottom: 2rem; color: #5A6C7D; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Si tienes una veterinaria, peluquería o negocio relacionado con mascotas y quieres formar parte
+                    de nuestra red de aliados, contáctanos.
+                </p>
+                <a href="https://wa.me/message/CPI3FRIOEGW4M1" class="btn btn--primary btn--lg" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Contactar para Alianza
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="chat-widget-container"></div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <h3>TrasLaMascota</h3>
+                <p>Tu servicio de confianza en Caracas para el traslado seguro y profesional de mascotas.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/traslamascota/" target="_blank" class="social-instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/traslamascota" target="_blank" class="social-facebook"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/message/CPI3FRIOEGW4M1" target="_blank" class="social-whatsapp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@traslamascota?lang=es" target="_blank" class="social-tiktok"><i
+                            class="fa-brands fa-tiktok"></i></a>
                 </div>
-            </Section>
-            <section>
-                <div class="d-flex justify-content-evenly flex-wrap">
-                    <div>
-                        <img class="galeria" src="../Images/Mascotas/perrogato1.jpg" alt="Perro y Gato">
-                    </div>
-                    <div>
-                        <img class="galeria" src="../Images/Mascotas/IMG_5951.JPG" alt="Perro y Gato">
-                    </div>
-                    <div>
-                        <img class="galeria" src="../Images/Mascotas/descarga (3).jpeg" alt="Perro y Gato">
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <h3 class="describa">Redes Sociales</h3>
-                <div class="redes">
-                    <a href="../pages/contacto.html"><i class="fa-solid fa-envelope fa-3x"></i></a>
-                </div>
-                <div class="redes">
-                    <a href="https://www.instagram.com/traslamascota/" target="_blank"><img class="redes__ig" src="../Images/SocialMedia/IG.png" alt="Instagram"></a>
-                </div>
-                <div class="redes">
-                    <a href="https://www.facebook.com/traslamascota" target="_blank"><i class="fa-brands fa-square-facebook fa-4x"></i></a>
-                </div>
-                <div class="redes">
-                    <a href="https://www.tiktok.com/@traslamascota?lang=es" target="_blank"><i class="fa-brands fa-tiktok fa-3x"></i></a>
-                </div>                
-                <div class="redes">
-                    <a href="https://wa.me/message/CPI3FRIOEGW4M1" target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a>
-                </div>    
-            <p class="describa">Derechos Reservados</p>
-        </footer>
-    </div>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+            </div>
+            <div class="footer__section">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="./servicios.html">Visitas Veterinarias</a></li>
+                    <li><a href="./servicios.html">Peluquería & Spa</a></li>
+                    <li><a href="./servicios.html">Paseos Recreativos</a></li>
+                    <li><a href="./servicios.html">Viajes a la Playa</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./galeria.html">Galería</a></li>
+                    <li><a href="./aliados.html">Aliados</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__section footer__contact">
+                <h4>Contacto</h4>
+                <p><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/message/CPI3FRIOEGW4M1"
+                        target="_blank">WhatsApp</a></p>
+                <p><i class="fa-solid fa-envelope"></i><a href="./contacto.html">Formulario de Contacto</a></p>
+                <p><i class="fa-solid fa-map-marker-alt"></i>Caracas, Venezuela</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 TrasLaMascota. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/chat-widget.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
 </body>
+
 </html>

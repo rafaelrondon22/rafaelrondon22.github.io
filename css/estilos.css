@@ -1387,4 +1387,218 @@ img {
   flex-wrap: wrap;
 }
 
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid #E4E7EB;
+}
+.service-detail:last-child {
+  border-bottom: none;
+}
+@media (max-width: 1024px) {
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+.service-detail--reverse .service-detail__content {
+  order: 2;
+}
+.service-detail--reverse .service-detail__image {
+  order: 1;
+}
+@media (max-width: 1024px) {
+  .service-detail--reverse .service-detail__content {
+    order: 1;
+  }
+  .service-detail--reverse .service-detail__image {
+    order: 2;
+  }
+}
+.service-detail__content {
+  display: flex;
+  gap: 1.5rem;
+}
+.service-detail__icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2B7A9B, #FF8C42);
+  color: #FFFFFF;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 576px) {
+  .service-detail__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.875rem;
+  }
+}
+.service-detail__text {
+  flex: 1;
+}
+.service-detail__text h2 {
+  margin-bottom: 1rem;
+  color: #2B7A9B;
+}
+.service-detail__description {
+  color: #5A6C7D;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.service-detail__features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.service-detail__features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  color: #2C3E50;
+}
+.service-detail__features li i {
+  color: #4CAF50;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+.service-detail__pricing {
+  background: linear-gradient(135deg, #E8F4F8, #FFF4ED);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.service-detail__pricing .price {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2B7A9B;
+  font-family: "Poppins", "Outfit", sans-serif;
+}
+.service-detail__pricing .price-note {
+  font-size: 0.875rem;
+  color: #5A6C7D;
+}
+.service-detail__image {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 250ms ease-in-out;
+}
+.service-detail__image:hover {
+  transform: scale(1.02);
+}
+.service-detail__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 250ms ease-in-out;
+  border-left: 4px solid #FF8C42;
+}
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.faq-item h4 {
+  color: #2B7A9B;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+}
+.faq-item h4 i {
+  color: #FF8C42;
+  font-size: 1.25rem;
+}
+.faq-item p {
+  color: #5A6C7D;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 250ms ease-in-out;
+}
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.gallery-item:hover .gallery-item__overlay {
+  opacity: 1;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 350ms ease-in-out;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(43, 122, 155, 0.8), rgba(255, 140, 66, 0.6));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.gallery-item__overlay i {
+  color: #FFFFFF;
+  font-size: 2.25rem;
+}
+
 /*# sourceMappingURL=estilos.css.map */

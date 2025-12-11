@@ -1,0 +1,192 @@
+// ============================================
+// Service Detail Page Styles
+// ============================================
+
+@import '../design-tokens';
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-12;
+    align-items: center;
+    margin-bottom: $spacing-20;
+    padding: $spacing-12 0;
+    border-bottom: 1px solid $color-gray-200;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        grid-template-columns: 1fr;
+        gap: $spacing-8;
+        margin-bottom: $spacing-12;
+    }
+
+    // Reverse layout for alternating sections
+    &--reverse {
+        .service-detail__content {
+            order: 2;
+        }
+
+        .service-detail__image {
+            order: 1;
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            .service-detail__content {
+                order: 1;
+            }
+
+            .service-detail__image {
+                order: 2;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: $spacing-6;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, $color-primary, $color-secondary);
+        color: $color-white;
+        border-radius: $radius-2xl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-4xl;
+        box-shadow: $shadow-lg;
+
+        @media (max-width: $breakpoint-sm) {
+            width: 60px;
+            height: 60px;
+            font-size: $font-size-3xl;
+        }
+    }
+
+    &__text {
+        flex: 1;
+
+        h2 {
+            margin-bottom: $spacing-4;
+            color: $color-primary;
+        }
+    }
+
+    &__description {
+        color: $color-text-medium;
+        line-height: $line-height-relaxed;
+        margin-bottom: $spacing-6;
+    }
+
+    &__features {
+        list-style: none;
+        padding: 0;
+        margin: $spacing-6 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: $spacing-3;
+            padding: $spacing-3 0;
+            color: $color-text-dark;
+
+            i {
+                color: $color-accent-green;
+                font-size: $font-size-lg;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__pricing {
+        background: linear-gradient(135deg, $color-primary-light, $color-secondary-pale);
+        padding: $spacing-6;
+        border-radius: $radius-xl;
+        margin: $spacing-6 0;
+        display: flex;
+        align-items: baseline;
+        gap: $spacing-4;
+        flex-wrap: wrap;
+
+        .price {
+            font-size: $font-size-4xl;
+            font-weight: $font-weight-bold;
+            color: $color-primary;
+            font-family: $font-heading;
+        }
+
+        .price-note {
+            font-size: $font-size-sm;
+            color: $color-text-medium;
+        }
+    }
+
+    &__image {
+        position: relative;
+        border-radius: $radius-2xl;
+        overflow: hidden;
+        box-shadow: $shadow-xl;
+        transition: transform $transition-base;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}
+
+// ============================================
+// FAQ Section
+// ============================================
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-6;
+}
+
+.faq-item {
+    background: $color-white;
+    padding: $spacing-6;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-sm;
+    transition: all $transition-base;
+    border-left: 4px solid $color-secondary;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-md;
+    }
+
+    h4 {
+        color: $color-primary;
+        margin-bottom: $spacing-4;
+        display: flex;
+        align-items: center;
+        gap: $spacing-3;
+        font-size: $font-size-lg;
+
+        i {
+            color: $color-secondary;
+            font-size: $font-size-xl;
+        }
+    }
+
+    p {
+        color: $color-text-medium;
+        line-height: $line-height-relaxed;
+        margin-bottom: 0;
+    }
+}
